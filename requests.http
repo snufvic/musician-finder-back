@@ -1,0 +1,132 @@
+@local=http://localhost:3030
+
+### get all
+GET {{local}}/instruments
+
+
+### get by id
+GET {{local}}/instruments?id=4
+
+
+### update by id
+PATCH {{local}}/instruments
+Content-Type: application/json
+
+{
+    "id":"1",
+    "inst_name":"electric guitar"
+}
+
+
+### Add new
+POST  {{local}}/instruments
+Content-Type: application/json
+
+{
+    "inst_name":"cvssssvv"
+}
+
+
+### delete by id
+DELETE {{local}}/instruments?id=28
+
+
+### checking things
+POST {{local}}/instruments/
+Content-Type: application/json
+
+{
+    "inst_name":"a"
+}
+
+
+##################################### musicians ################
+### Add new
+POST {{local}}/signup
+Content-Type: application/json
+
+{
+"email": "a@aaqq.com",
+"password": "123456",
+"first_name":"Amit"
+}
+
+
+### get all
+GET {{local}}/signup
+
+
+### get by id
+GET {{local}}/signup?id=2
+
+
+
+### update by id
+PATCH {{local}}/signup
+Content-Type: application/json
+
+{
+    "id":"4",
+    "email": "amit@blgsa.com",
+    "phone": "0559999999",
+    "password": "123456222"
+}
+
+
+### delete by id
+DELETE {{local}}/signup?id=5
+
+
+
+##################################### sign in ################
+### Add new
+POST {{local}}/auth
+Content-Type: application/json
+
+{
+"email": "a@a.com",
+"password": "123456"
+}
+
+
+### me - user verified
+GET {{local}}/signup/me
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImFjY2Vzc19sZXZlbCI6MSwiaWF0IjoxNjU1ODk1MzA3fQ.SjYadD9eE6LUz7O9VkiwA4T8_6LlPRjljteeHDK-Z20
+
+
+##################################### district ################
+### get districts
+GET {{local}}/district
+
+
+
+
+##################################### update musician ################
+### 
+
+PATCH {{local}}/musician_card
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImFjY2Vzc19sZXZlbCI6MSwiaWF0IjoxNjU2MTA3MjIzfQ.WPj9AGPrAllwDFPhv24Fh-NxgXdHWWHm2BxkDLol_-M
+
+{
+    "id":"1",
+    "phone": "0559555555",
+    "first_name": "Amit",
+    "last_name": "Wic"
+}
+
+
+
+##################################### update districts ################
+### 
+
+post {{local}}/musician_card/districts
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImFjY2Vzc19sZXZlbCI6MSwiaWF0IjoxNjU2MTA3MjIzfQ.WPj9AGPrAllwDFPhv24Fh-NxgXdHWWHm2BxkDLol_-M
+
+{
+    "id":"1",
+    "phone": "0559555555",
+    "first_name": "Amit",
+    "last_name": "Wic"
+}

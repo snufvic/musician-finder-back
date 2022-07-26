@@ -38,7 +38,7 @@ async function generatePassword(email) {
 async function sendEmail(email, password) {
   const transporter = nodemailer.createTransport({
     host: config.get("smtpHost"),
-    port: 2525,
+    port: config.get("smtpPORT"),
     auth: {
       user: config.get("smtpUser"),
       pass: config.get("smtpPass"),
